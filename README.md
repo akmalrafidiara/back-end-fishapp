@@ -42,3 +42,7 @@ Team Member:
 | `material` | `string` | **Required** |
 
 
+
+## Discord Documentation
+
+![alt text](https://cdn.discordapp.com/attachments/1041933190467698752/1045293398862606366/Docum.jpg)
