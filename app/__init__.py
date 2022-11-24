@@ -2,7 +2,7 @@ import os
 import json
 
 from flask import Flask, render_template, jsonify, request
-from .db import get_ponds, get_pond
+from .db import get_ponds, get_pond, insert_pond
 from bson.json_util import dumps
 from flask_cors import CORS
 
@@ -33,35 +33,53 @@ def create_app(test_config=None):
 
     @app.get('/pond/<id>')
     def pond_id(id):
-      filter = {'id' : id}
+      filter = {'_id' : id}
       data = get_pond(filter)   
       data = dumps(data)
       return json.loads(data)
 
     @app.post('/pond')
-    def insert_pond():
+    def add_pond():
+        id = request.form['id']
         name = request.form['name']
         shape = request.form['shape']
         material = request.form['material']
         length = request.form['length']
         width = request.form['width']
-        id = request.form['id']
+        height = request.form['height']
         location = request.form['location']
         diameter = request.form['diameter']
         data = {
+            "id" : id,
             "name" : name,
-            "shape" : shape,
-            "material" : material,
+            "shape_id" : shape,
+            "material_id" : material,
             "length" : length,
             "width" : width,
-            "id" : id,
+            "height" : height,
             "location" : location,
             "diameter" : diameter,
         }
         row = insert_pond(data)
         if (row > 0):
-            return True
-        return False
+            data = {
+                "message" : "success",
+            }
+            response = app.response_class(
+                response=json.dumps(data),
+                status=201,
+                mimetype='application/json'
+            )
+            return response
+        data = {
+            "message" : "Failed",
+        }
+        response = app.response_class(
+            response=json.dumps(data),
+            status=200,
+            mimetype='application/json'
+        )
+        return response
 
     @app.errorhandler(404)
     def page_not_found(e):

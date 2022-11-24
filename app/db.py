@@ -28,8 +28,8 @@ def get_pond(filter={}):
 
 def insert_pond(data):
     collection = get_collection("pond")
-    row = collection.insert_one(data)
-    return row
+    collection.insert_one(data)
+    return 1
 
 def update_pond(filter, update):
     collection = get_collection("pond")    
