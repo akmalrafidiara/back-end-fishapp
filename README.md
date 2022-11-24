@@ -1,9 +1,10 @@
-# Homework 2 Human Computer Interaction
+## Backend FishApp
 
-## Akmal Rafi Diara Putra
+Anggota kelompok:
 
-## Narendra Arkan Putra Darmawan
-
-## Muhammad Izzat Azizan
-
-## Delvino Ardi
+- Akmal Rafi Diara Putra
+- Muhammad Izzat Azizan
+- Delvino Ardi
+- Muhammad Hadiid Faathir
+- Rasyaad Maulana Khandiyas
+- Narendra Arkan Putra Darmawan
