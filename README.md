@@ -3,12 +3,12 @@
 
 Team Member:
 
-- Akmal Rafi Diara Putra
-- Muhammad Izzat Azizan
-- Delvino Ardi
-- Muhammad Hadiid Faathir
-- Rasyaad Maulana Khandiyas
-- Narendra Arkan Putra Darmawan
+- Akmal Rafi Diara Putra - 1313621007
+- Muhammad Izzat Azizan - 1313621013
+- Delvino Ardi - 1313621025
+- Muhammad Hadiid Faathir - 1313621035
+- Rasyaad Maulana Khandiyas - 1313621020
+- Narendra Arkan Putra Darmawan - 1313621043
 
 ## API Reference
 
