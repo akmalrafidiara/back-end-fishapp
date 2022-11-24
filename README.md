@@ -1,5 +1,5 @@
 ## Backend FishApp
-#### All team member were present during discussion via Discord
+#### All team member were present and active during discussion via Discord
 
 Team Member:
 
