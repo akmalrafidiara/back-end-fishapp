@@ -6,6 +6,7 @@ from .db import get_ponds, get_pond, insert_pond
 from bson.json_util import dumps
 from flask_cors import CORS
 
+
 def create_app(test_config=None):
     #create and configure the app
     app = Flask(__name__, instance_relative_config=True)
@@ -40,26 +41,27 @@ def create_app(test_config=None):
 
     @app.post('/pond')
     def add_pond():
-        id = request.form['id']
-        name = request.form['name']
-        shape = request.form['shape']
-        material = request.form['material']
-        length = request.form['length']
-        width = request.form['width']
-        height = request.form['height']
-        location = request.form['location']
-        diameter = request.form['diameter']
+        name = request.json['name']
+        shape = request.json['shape']
+        material = request.json['material']
+        location = request.json['location']
+        # id = request.form['id']
+        # length = request.form['length']
+        # width = request.form['width']
+        # height = request.form['height']
+        # diameter = request.form['diameter']
         data = {
-            "id" : id,
             "name" : name,
             "shape_id" : shape,
             "material_id" : material,
-            "length" : length,
-            "width" : width,
-            "height" : height,
             "location" : location,
-            "diameter" : diameter,
+            # "id" : id,
+            # "length" : length,
+            # "width" : width,
+            # "height" : height,
+            # "diameter" : diameter,
         }
+        print(data)
         row = insert_pond(data)
         if (row > 0):
             data = {
