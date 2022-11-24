@@ -13,13 +13,13 @@ Anggota kelompok:
 
 #### Get all pond
 
-```http
+```
   GET /pond
 ```
 
 #### Get pond
 
-```http
+```
   GET /pond/${id}
 ```
 
