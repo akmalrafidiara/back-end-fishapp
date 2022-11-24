@@ -1,5 +1,4 @@
 ## Backend FishApp
-## All team member were present during discussion via Discord
 
 Anggota kelompok:
 
