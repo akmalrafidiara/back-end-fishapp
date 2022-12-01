@@ -1,5 +1,5 @@
 ## Backend FishApp
-#### All team member were present during discussion via Discord
+#### All team member were present and active during discussion via Discord
 
 Team Member:
 
@@ -40,3 +40,9 @@ Team Member:
 | `location` | `string` | **Required** |
 | `shape`    | `string` | **Required** |
 | `material` | `string` | **Required** |
+
+
+
+## Discord Documentation
+
+![alt text](https://cdn.discordapp.com/attachments/1041933190467698752/1045293398862606366/Docum.jpg)

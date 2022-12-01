@@ -4,6 +4,7 @@ import json
 from flask import Flask, render_template, jsonify, request
 from .db import get_ponds, get_pond, insert_pond, update_pond
 from bson.json_util import dumps
+from bson.objectid import ObjectId
 from flask_cors import CORS
 
 
@@ -34,10 +35,13 @@ def create_app(test_config=None):
 
     @app.get('/pond/<id>')
     def pond_id(id):
-      filter = {'_id' : id}
+      ObjInstance = ObjectId(id)
+      filter = {'_id':ObjInstance}
       data = get_pond(filter)   
       data = dumps(data)
       return json.loads(data)
+    #   data = json.loads(data)
+    #   return data['_id']['$oid']
 
     @app.post('/pond')
     def add_pond():
@@ -85,8 +89,8 @@ def create_app(test_config=None):
     
     @app.put('/pond/<id>')
     def edit_pond():
-        filter = {'_id' : id}
-        
+        ObjInstance = ObjectId(id)
+        filter = {'_id':ObjInstance}
         name = request.json['name']
         shape = request.json['shape']
         material = request.json['material']
