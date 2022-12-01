@@ -24,7 +24,7 @@ def create_app(test_config=None):
     @app.route('/index')
     @app.route('/')
     def index():
-        return "Hello Statics"
+        return "Hello World"
 
     @app.get('/pond')
     def pond():
